@@ -1,0 +1,5 @@
+train: ../train/images
+val: ../val/images
+
+nc: 8
+names: ['grenade', 'knife', 'handgun', 'tank', 'shotgun', 'missile', 'rifile', 'bazooka']

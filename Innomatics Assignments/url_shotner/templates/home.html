@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+        body{
+            background-color: rgb(43, 210, 244);
+            width: 60%;
+            height: 50%;
+            margin: 10% 20% 25% 28%;
+        }
+        .wide{
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 80%;
+            padding: 10px 10px 10px 10px;
+        }
+        button{
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 12%;
+            padding: 3px 3px 3px 3px;
+        }
+        a{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a URL Shortener Application..!</h1>
+    <form action="{{ url_for('home') }}" method="post">
+        <div>
+            <input class="wide" type="text" name="input_string" placeholder="Insert your URL string here">
+        </div>
+        <br>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button>Submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b><a href="{{ url_for('history') }}">History</a></b>
+            
+        </div>
+    </form>
+    {% if short_url != None%}
+        <h3>{{short_url[0]}}</h3>
+    {% else %}
+        <h3></h3>
+    {% endif %}
+    {% block body %}
+
+    {% endblock %}
+</body>
+</html>

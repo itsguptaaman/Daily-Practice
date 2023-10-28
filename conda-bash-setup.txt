@@ -1,0 +1,12 @@
+1. Download and install git for windows at: https://gitforwindows.org/
+2. Download and install Anaconda for windows at: https://www.anaconda.com/products/ind... 
+(scroll down a little and click the 'Download' button)
+3. Open 'Anaconda Prompt' or 'Git Bash' and run: conda init bash
+If you are in 'Git Bash' run: echo '. ${HOME}/.bash_profile' >> /.bashrc
+
+4. Reopen 'Git Bash' and you should see (base) in the first line. Now you can run: ipython 
+5. That's it! 
+
+####################
+git permission denied error on ssh
+https://stackoverflow.com/questions/2643502/git-how-to-solve-permission-denied-publickey-error-when-using-git
